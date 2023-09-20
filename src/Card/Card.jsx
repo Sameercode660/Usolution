@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Card({page, title, tag1, tag2, tag3}) {
+function Card({page, title, tag1, tag2, tag3, image, description}) {
 
   
   return (
@@ -9,7 +9,8 @@ function Card({page, title, tag1, tag2, tag3}) {
    
       <div className="w-[250px] rounded-md border bg-slate-900 text-white mt-[30px]">
         <img
-          src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
+          // src=""
+          src={image}
           alt="Laptop"
           className="h-[200px] w-full rounded-t-md object-cover"
         />
@@ -33,8 +34,7 @@ function Card({page, title, tag1, tag2, tag3}) {
             </svg>
           </h1>
           <p className="mt-3 text-sm text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-            debitis?
+             {description}
           </p>
           <div className="mt-4">
             <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">

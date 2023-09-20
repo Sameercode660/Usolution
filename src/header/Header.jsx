@@ -62,7 +62,7 @@ function Header() {
               type="button"
               className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              Button text
+              Join Us
             </button>
           </div>
           <div className="lg:hidden text-white">
@@ -101,6 +101,16 @@ function Header() {
           </li>
           <li className="text-white w-full hover:bg-slate-500 pt-2 pb-2">
             <Link to='/about'>About</Link>
+          </li>
+          <li>
+          <button
+              type="button"
+              className="rounded-md bg-cyan-400 px-4 py-1 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black border border-gray-300"
+            >
+              <Link to='/contribution'>
+                Join Us
+              </Link>
+            </button>
           </li>
         </ul>
       </div>
