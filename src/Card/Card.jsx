@@ -51,7 +51,7 @@ function Card({page, title, tag1, tag2, tag3}) {
             type="button"
             className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           ><Link to={page}>
-            <button className="w-full">Read More</button>
+             <span className="w-full block">Read More</span>
           </Link>
           </button>
         </div>
