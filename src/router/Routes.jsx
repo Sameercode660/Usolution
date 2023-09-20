@@ -9,7 +9,7 @@ import WebTechMainPage from '../components/fybbaPage/webtech/WebTechMainPage.jsx
 
 import { BrowserRouter, Route, Link, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 // C language assignment imports
-import Assignment1 from '../components/fybbaPage/Clanguage/assigments/assignment1.jsx'
+import Assignment1 from '../components/fybbaPage/Clanguage/assigments/Assignment1.jsx'
 import Assignment2 from '../components/fybbaPage/Clanguage/assigments/Assignment2.jsx'
 
 
