@@ -4,11 +4,13 @@ import Footer from './footer/Footer'
 import Card from './Card/Card'
 import { Outlet } from 'react-router-dom'
 import TypeWriter from './typeWriter/TypeWriter'
+import useTheme from './context/ThemeContext'
 
 function App() {
 
+  const {theme, setTheme} = useTheme()
   return (
-    <div className='bg-slate-900'>
+    <div className={`${theme === 'light' ? 'bg-white' : 'bg-slate-900'}`}>
       <Header/>
             <TypeWriter/> 
       <div className="w-full flex justify-center gap-5 flex-wrap">

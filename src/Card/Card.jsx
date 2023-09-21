@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useTheme from "../context/ThemeContext";
 
 function Card({page, title, tag1, tag2, tag3, image, description}) {
 
+  const {theme, setTheme} = useTheme()
   
   return (
     <>
    
-      <div className="w-[250px] rounded-md border bg-slate-900 text-white mt-[30px]">
+      <div className={`w-[250px] rounded-md border ${ theme === 'light' ? 'bg-white text-black border-gray-300 = gray-border-gray-300.bind(this)' : 'bg-slate-900 text-white'} mt-[30px]`}>
         <img
           // src=""
           src={image}
@@ -33,7 +35,7 @@ function Card({page, title, tag1, tag2, tag3, image, description}) {
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </h1>
-          <p className="mt-3 text-sm text-gray-300">
+          <p className={`mt-3 text-sm ${theme === 'light' ? 'text-gray-600' : 'text-gray-400'}`}>
              {description}
           </p>
           <div className="mt-4">
