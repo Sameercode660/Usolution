@@ -10,7 +10,7 @@ function TypeWriter() {
   function typingText(typewriter) {
  
       typewriter
-      .typeString("WelCome To U Solution")
+      .typeString("Welcome To U Solution")
       .pauseFor(1000)
       .deleteAll()
       .typeString("Find What U Want")
