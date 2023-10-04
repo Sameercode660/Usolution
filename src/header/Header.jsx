@@ -139,9 +139,9 @@ function Header() {
           <li>
           <button 
               onClick={changeTheme}
-              className={`${theme === 'light' ? 'text-black' : 'text-white'} p-2 ml-4`}
+              className={`${theme === 'light' ? 'text-black' : 'text-white'} p-2 ml-4 border-none outline-none`}
             >   
-            <i className="fa-solid fa-moon text-lg border-none outline-none"></i>
+            <i className="fa-solid fa-moon text-lg "></i>
             </button>
           </li>
         </ul>
