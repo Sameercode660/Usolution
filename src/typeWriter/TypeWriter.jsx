@@ -5,21 +5,27 @@ import useTheme from "../context/ThemeContext";
 
 function TypeWriter() {
   const {theme, setTheme} = useTheme()
+  
 
   function typingText(typewriter) {
-    typewriter
+ 
+      typewriter
       .typeString("WelCome To U Solution")
       .pauseFor(1000)
       .deleteAll()
       .typeString("Find What U Want")
-      .start()     
+      .pauseFor(1000)
+      .start().
+      deleteAll()
+      .start()
   }
   
+ 
    
   return (
     <>
       <div className={`w-1/2 m-auto h-40 flex justify-center items-center sm:text-[50px] text-[25px] ${theme === 'light' ? 'text-black' : 'text-white'}`}>
-        <Typewriter onInit={typingText} />
+        <Typewriter onInit={typingText} options={{loop : true , autoStart : true}} />
       </div>
     </>
   );
