@@ -24,7 +24,7 @@ function TypeWriter() {
    
   return (
     <>
-      <div className={`w-1/2 m-auto h-40 flex justify-center items-center sm:text-[50px] text-[25px] ${theme === 'light' ? 'text-black' : 'text-white'} text-justify`}>
+      <div className={`w-1/2 m-auto h-40 flex justify-center items-center sm:text-[50px] text-[25px] ${theme === 'light' ? 'text-black' : 'text-white'}`}>
         <Typewriter onInit={typingText} options={{loop : true , autoStart : true}} />
       </div>
     </>
