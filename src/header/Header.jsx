@@ -110,6 +110,8 @@ function Header() {
           </div>
         </div>
       </div>
+
+      {/* responsive menu jsx  */}
       <div className={`responsive-navigation ${click ? 'flex' : 'hidden'} lg:hidden flex items-center justify-center`}>
         <ul className="w-full text-center">
           <li
@@ -139,7 +141,7 @@ function Header() {
               onClick={changeTheme}
               className={`${theme === 'light' ? 'text-black' : 'text-white'} p-2 ml-4`}
             >   
-            <i className="fa-solid fa-moon text-lg"></i>
+            <i className="fa-solid fa-moon text-lg border-none outline-none"></i>
             </button>
           </li>
         </ul>
