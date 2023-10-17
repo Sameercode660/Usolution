@@ -4,6 +4,7 @@ import { useState } from 'react'
 import AssignmentComponent from '../../../../AssignmentComponent/AssignmentComponent'
 import useTheme from '../../../../context/ThemeContext'
 import useFetchData from '../../../../context/FetchData'
+import '../../../../spinner/Spinner.gif'
 
 function Assignment1() {
 
@@ -34,7 +35,7 @@ function Assignment1() {
         </div> */}
 
         {
-            cLangAsn1.length === 0 ? <p className='text-white'>loading... </p> : cLangAsn1.map((asn)=>(
+            cLangAsn1.length === 0 ? <p>loading...</p> : cLangAsn1.map((asn)=>(
                 <AssignmentComponent key={asn.answer} question={asn.question} answer={asn.answer}></AssignmentComponent>
             ))
         }
