@@ -33,8 +33,8 @@ function Assignment1() {
         </div> */}
 
         {
-            cLangAsn1 &&  cLangAsn1.map((asn)=>(
-                <AssignmentComponent question={asn.question} answer={asn.answer}></AssignmentComponent>
+            cLangAsn1.map((asn)=>(
+                <AssignmentComponent key={asn.answer} question={asn.question} answer={asn.answer}></AssignmentComponent>
             ))
         }
  
