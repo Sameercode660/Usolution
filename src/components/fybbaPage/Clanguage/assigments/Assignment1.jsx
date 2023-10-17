@@ -3,10 +3,12 @@ import React from 'react'
 import { useState } from 'react'
 import AssignmentComponent from '../../../../AssignmentComponent/AssignmentComponent'
 import useTheme from '../../../../context/ThemeContext'
+import useFetchData from '../../../../context/FetchData'
 
 function Assignment1() {
 
   const {theme} = useTheme()
+  const {cLangAsn1} = useFetchData()
   return (
     <>
         <div className={`text-center font-bold text-lg mb-[12px] ${theme === 'light' ? 'text-black' : 'text-white'}`}>Assignments based on Data Types and Operators</div>
@@ -30,26 +32,12 @@ function Assignment1() {
             </div>
         </div> */}
 
-        <AssignmentComponent 
-            question = {'1.Write a C Program to demonstrate the working of arithmetic operators (Associativity and precedence of arithmetic operators is expected)'}
-            answer={'#include<stdio.h>\n#include<conio.h>\n\nvoid main(void){\n\tint a = 10, b = 20, temp;\n\t clrscr();\n\t temp = a, a = b , b = temp;\n\t printf("a=%d, b=%d", a, b);\n\t getch();\n}'}
-        ></AssignmentComponent>
-
-        <AssignmentComponent 
-            question = {'1.Write a C Program to demonstrate the working of arithmetic operators (Associativity and precedence of arithmetic operators is expected)'}
-            answer={'#include<stdio.h>\n#include<conio.h>\n\nvoid main(void){\n\tint a = 10, b = 20, temp;\n\t clrscr();\n\t temp = a, a = b , b = temp;\n\t printf("a=%d, b=%d", a, b);\n\t getch();\n}'}
-        ></AssignmentComponent>
-
-        <AssignmentComponent 
-            question = {'1.Write a C Program to demonstrate the working of arithmetic operators (Associativity and precedence of arithmetic operators is expected)'}
-            answer={'#include<stdio.h>\n#include<conio.h>\n\nvoid main(void){\n\tint a = 10, b = 20, temp;\n\t clrscr();\n\t temp = a, a = b , b = temp;\n\t printf("a=%d, b=%d", a, b);\n\t getch();\n}'}
-        ></AssignmentComponent>
-        
-        <AssignmentComponent 
-            question = {'1.Write a C Program to demonstrate the working of arithmetic operators (Associativity and precedence of arithmetic operators is expected)'}
-            answer={'#include<stdio.h>\n#include<conio.h>\n\nvoid main(void){\n\tint a = 10, b = 20, temp;\n\t clrscr();\n\t temp = a, a = b , b = temp;\n\t printf("a=%d, b=%d", a, b);\n\t getch();\n}'}
-        ></AssignmentComponent>
-        
+        {
+            cLangAsn1 &&  cLangAsn1.map((asn)=>(
+                <AssignmentComponent question={asn.question} answer={asn.answer}></AssignmentComponent>
+            ))
+        }
+ 
 
     </>    
     
