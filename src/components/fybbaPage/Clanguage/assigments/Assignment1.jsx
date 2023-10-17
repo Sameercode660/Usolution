@@ -9,6 +9,7 @@ function Assignment1() {
 
   const {theme} = useTheme()
   const {cLangAsn1} = useFetchData()
+  console.log(cLangAsn1)
   return (
     <>
         <div className={`text-center font-bold text-lg mb-[12px] ${theme === 'light' ? 'text-black' : 'text-white'}`}>Assignments based on Data Types and Operators</div>
@@ -33,7 +34,7 @@ function Assignment1() {
         </div> */}
 
         {
-            cLangAsn1.map((asn)=>(
+            cLangAsn1.length === 0 ? <p className='text-white'>loading... </p> : cLangAsn1.map((asn)=>(
                 <AssignmentComponent key={asn.answer} question={asn.question} answer={asn.answer}></AssignmentComponent>
             ))
         }

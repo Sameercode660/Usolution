@@ -5,7 +5,7 @@ const FetchDataContext = createContext()
 
 export const FetchDataContextProvider = ({children})=>{
 
-    const [cLangAsn1, setClangAsn1] = useState()
+    const [cLangAsn1, setClangAsn1] = useState([])
 
     async function fetchingData(){
         const response = await databases.listDocuments('652e497b8cd0a7ceaca1','652e4ae377d536393098')
