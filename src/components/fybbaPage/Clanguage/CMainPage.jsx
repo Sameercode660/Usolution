@@ -34,6 +34,16 @@ function CMainPage() {
      <div className="outlet   ">
         <Outlet/>
      </div>
+     <div className="navigator flex justify-center items-center gap-2 pb-[40px]  ">
+        <Button assignment="assignment1" text={1}/>
+        <Button assignment="assignment2" text={2}/>
+        <Button text={3}/>
+        <Button text={4}/>
+        <Button text={5}/>
+        <Button text={6}/>
+        <Button text={7}/>
+        <Button text={8}/>
+     </div>
      <Footer/>
      </>
   )
