@@ -6,17 +6,21 @@ const FetchDataContext = createContext()
 export const FetchDataContextProvider = ({children})=>{
 
     const [cLangAsn1, setClangAsn1] = useState([])
+    const [cLangAsn2, setClangAsn2] = useState([])
+    
 
     async function fetchingData(){
         const response = await databases.listDocuments( import.meta.env.VITE_APPWRITE_DB_ID, import.meta.env.VITE_APPWRITE_COLLECTION_FY_C_ASSN1_ID )
         setClangAsn1(response.documents)
+        const responseAsn2 = await databases.listDocuments( import.meta.env.VITE_APPWRITE_DB_ID, import.meta.env.VITE_APPWRITE_COLLECTION_FY_C_ASSN2_ID )
+        setClangAsn2(responseAsn2.documents)
     }
 
     useEffect(()=>{
         fetchingData()
     }, [])
     return(
-        <FetchDataContext.Provider value={{cLangAsn1}}>
+        <FetchDataContext.Provider value={{cLangAsn1, cLangAsn2}}>
             {children}
         </FetchDataContext.Provider>
     )
