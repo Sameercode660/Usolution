@@ -5,9 +5,11 @@ import Button from '../Button'
 import { Outlet } from 'react-router-dom'
 import Card from '../../Card/Card'
 import useTheme from '../../context/ThemeContext'
+import useFetchData from '../../context/FetchData'
 
 function Page1() {
 
+  const {fyClangAssnFetchData} = useFetchData()
   const {theme, setTheme} = useTheme()
   if(theme === 'light')
   {
@@ -22,7 +24,7 @@ function Page1() {
     <Header/>
     <div className={`w-1/2 m-auto flex justify-center items-center gap-1 flex-wrap ${theme === 'light' ? 'bg-white' : 'bg-slate-900'}`}>
       <div className="container1">
-        <Card title={'Clanguage'} page={'/CMainPage'} tag1={'Asgn..1'} tag2={'Asgn..2'} tag3={'Asgn..3'} image={'https://images.pexels.com/photos/1921326/pexels-photo-1921326.jpeg?auto=compress&cs=tinysrgb&w=1600'} description={'All the C language important lab book solution'}></Card>
+        <Card title={'Clanguage'} page={'/CMainPage'} tag1={'Asgn..1'} tag2={'Asgn..2'} tag3={'Asgn..3'} image={'https://images.pexels.com/photos/1921326/pexels-photo-1921326.jpeg?auto=compress&cs=tinysrgb&w=1600'} description={'All the C language important lab book solution'} fetchDataFunction={fyClangAssnFetchData}></Card>
       </div>
       <div className="container2">
         <Card title={'DBMS'} page={'/DBMSMainPage'} tag1={'Asgn..1'} tag2={'Asgn..2'} tag3={'Asgn..3'} image={'https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&w=1600'} description={'All the DBMS important Assignment of lab book'}></Card>
